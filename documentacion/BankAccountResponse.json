@@ -1,0 +1,23 @@
+{
+ "id" : "AE1235454",
+ "startDate" : "2019-04-01",
+ "endDate" : "2019-04-20",
+ "transactions" : [{
+ "id" : "152535", 
+ "date" : "2019-04-13 19:30:25",
+ "description" : "Credit card payment",
+ "amount" : -100.00
+ },
+ {
+ "id" : "152688",
+ "date" : "2019-04-14 16:28:31",
+ "description" : "Amazon payments",
+ "amount" : -125.43
+ },
+ {
+ "id" : "152688",
+ "date" : "2019-04-14 16:28:31",
+ "description" : "Monthly paycheck",
+ "amount" : 1099.67
+ }]
+}
