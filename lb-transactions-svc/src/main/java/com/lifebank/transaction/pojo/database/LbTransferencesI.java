@@ -6,7 +6,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "lb_transferences", schema = "lb_bank", catalog = "postgres")
 @IdClass(LbTransferencesPOJOPK.class)
-public class LbTransferencesPOJO {
+public class LbTransferencesI implements ITransaction {
     private String traEmitterAccount;
     private String traReceiverAccount;
     private Integer traDtrId;
@@ -48,7 +48,7 @@ public class LbTransferencesPOJO {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        LbTransferencesPOJO that = (LbTransferencesPOJO) o;
+        LbTransferencesI that = (LbTransferencesI) o;
         return Objects.equals(traEmitterAccount, that.traEmitterAccount) &&
                 Objects.equals(traReceiverAccount, that.traReceiverAccount) &&
                 Objects.equals(traDtrId, that.traDtrId);
@@ -87,5 +87,18 @@ public class LbTransferencesPOJO {
 
     public void setLbTransferencesDetailByTraDtrId(LbTransferencesDetailPOJO lbTransferencesDetailByTraDtrId) {
         this.lbTransferencesDetailByTraDtrId = lbTransferencesDetailByTraDtrId;
+    }
+
+    @Transient
+    public String getSender() {
+        return traEmitterAccount;
+    }
+    @Transient
+    public String getReceiver() {
+        return traReceiverAccount;
+    }
+    @Transient
+    public String getDetails() {
+        return traDtrId.toString();
     }
 }

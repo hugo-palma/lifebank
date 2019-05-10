@@ -1,6 +1,8 @@
 package com.lifebank.transaction.controller;
 
-import com.lifebank.transaction.pojo.database.LbTransferencesPOJO;
+import com.lifebank.transaction.factory.IFactory;
+import com.lifebank.transaction.factory.TransferenciasFactory;
+import com.lifebank.transaction.pojo.database.LbTransferencesI;
 import com.lifebank.transaction.process.DetailsProcess;
 import com.lifebank.transaction.repository.BankAccountsRepository;
 import com.lifebank.transaction.repository.TransferenceDetailsRepository;
@@ -29,24 +31,28 @@ public class DetailsController {
                                             @RequestParam("start") String startDate,
                                             @RequestParam("end") String endDate,
                                             @RequestParam("prd") String prd){
-        DetailsProcess<LbTransferencesPOJO> detailsProcess;
+        DetailsProcess<LbTransferencesI> detailsProcess;
+        IFactory factory;
         switch (prd){
             case KEY_CREDIT:
-                detailsProcess = new DetailsProcess<>(env, bankAccountsRepository, transferenceDetailsRepository, transferencesRepository);
+                //TODO:Cambiar repositorio
+                factory = new TransferenciasFactory(env, transferenceDetailsRepository);
+                detailsProcess = new DetailsProcess<>(env, bankAccountsRepository, transferenceDetailsRepository, transferencesRepository, factory);
                 break;
             case KEY_LOAN:
                 //TODO:Cambiar repositorio
-                detailsProcess = new DetailsProcess<>(env, bankAccountsRepository, transferenceDetailsRepository, transferencesRepository);
+                factory = new TransferenciasFactory(env, transferenceDetailsRepository);
+                detailsProcess = new DetailsProcess<>(env, bankAccountsRepository, transferenceDetailsRepository, transferencesRepository, factory);
                 break;
             case KEY_TRANSFERENCES:
                 //TODO:Cambiar repositorio
-                detailsProcess = new DetailsProcess<>(env, bankAccountsRepository, transferenceDetailsRepository, transferencesRepository);
+                factory = new TransferenciasFactory(env, transferenceDetailsRepository);
+                detailsProcess = new DetailsProcess<>(env, bankAccountsRepository, transferenceDetailsRepository, transferencesRepository, factory);
                 break;
             default:
                 return new ResponseEntity<>("No existe Producto", HttpStatus.BAD_REQUEST);
 
         }
-        detailsProcess.process(accountID);
-        return new ResponseEntity<>("hola Mundo", HttpStatus.OK);
+        return detailsProcess.process(accountID);
     }
 }

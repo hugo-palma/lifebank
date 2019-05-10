@@ -1,6 +1,7 @@
 package com.lifebank.transaction.pojo.response.transactions;
 
 import com.fasterxml.jackson.annotation.*;
+import com.lifebank.transaction.pojo.database.ITransaction;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +23,7 @@ public class ProductDetailsResponse {
     @JsonProperty("endDate")
     private String endDate;
     @JsonProperty("transactions")
-    private List<TransferenceTransaction> transactions = null;
+    private List<Transaction> transactions = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -57,12 +58,12 @@ public class ProductDetailsResponse {
     }
 
     @JsonProperty("transactions")
-    public List<TransferenceTransaction> getTransactions() {
+    public List<Transaction> getTransactions() {
         return transactions;
     }
 
     @JsonProperty("transactions")
-    public void setTransactions(List<TransferenceTransaction> transactions) {
+    public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
     }
 

@@ -11,8 +11,8 @@ public class LbBankAccountPOJO {
     private String accId;
     private Timestamp accFechaCreacion;
     private Double accMonto;
-    private Collection<LbTransferencesPOJO> lbTransferencesByAccId;
-    private Collection<LbTransferencesPOJO> lbTransferencesByAccId_0;
+    private Collection<LbTransferencesI> lbTransferencesByAccId;
+    private Collection<LbTransferencesI> lbTransferencesByAccId_0;
 
     @Id
     @Column(name = "acc_id", nullable = false, length = 10)
@@ -60,20 +60,20 @@ public class LbBankAccountPOJO {
     }
 
     @OneToMany(mappedBy = "lbBankAccountByTraEmitterAccount")
-    public Collection<LbTransferencesPOJO> getLbTransferencesByAccId() {
+    public Collection<LbTransferencesI> getLbTransferencesByAccId() {
         return lbTransferencesByAccId;
     }
 
-    public void setLbTransferencesByAccId(Collection<LbTransferencesPOJO> lbTransferencesByAccId) {
+    public void setLbTransferencesByAccId(Collection<LbTransferencesI> lbTransferencesByAccId) {
         this.lbTransferencesByAccId = lbTransferencesByAccId;
     }
 
     @OneToMany(mappedBy = "lbBankAccountByTraReceiverAccount")
-    public Collection<LbTransferencesPOJO> getLbTransferencesByAccId_0() {
+    public Collection<LbTransferencesI> getLbTransferencesByAccId_0() {
         return lbTransferencesByAccId_0;
     }
 
-    public void setLbTransferencesByAccId_0(Collection<LbTransferencesPOJO> lbTransferencesByAccId_0) {
+    public void setLbTransferencesByAccId_0(Collection<LbTransferencesI> lbTransferencesByAccId_0) {
         this.lbTransferencesByAccId_0 = lbTransferencesByAccId_0;
     }
 }
