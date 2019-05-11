@@ -16,24 +16,24 @@ import java.util.Optional;
 
 public class DetailsProcess <T extends ITransaction> {
     private Environment env;
-    JpaRepository productosRepository;
+    JpaRepository productoRepository;
     JpaRepository detallesRepository;
     TransaccionesRepository transaccionesRepository;
     IFactory factory;
 
-    public DetailsProcess(Environment env, JpaRepository productosRepository, JpaRepository detallesRepository, TransaccionesRepository transaccionesRepository, IFactory factory){
+    public DetailsProcess(Environment env, JpaRepository productoRepository, JpaRepository detallesRepository, TransaccionesRepository transaccionesRepository, IFactory factory){
         this.env = env;
-        this.productosRepository = productosRepository;
+        this.productoRepository = productoRepository;
         this.detallesRepository = detallesRepository;
         this.transaccionesRepository = transaccionesRepository;
         this.factory = factory;
     }
-    public <R extends ITransaction> ResponseEntity process(String accountID){
+    public <R extends ITransaction> ResponseEntity process(String productId, String startDate, String endDate){
         List<ITransaction> listaTransacciones;
-        listaTransacciones = transaccionesRepository.findTransaccionesOfProduct(accountID);
+        listaTransacciones = transaccionesRepository.findTransaccionesOfProduct(productId);
         if(listaTransacciones.isEmpty())
         {
-            Optional oCuenta  = productosRepository.findById(accountID);
+            Optional oCuenta  = productoRepository.findById(productId);
             if(!oCuenta.isPresent())
             {
                 return new ResponseEntity("No existe", HttpStatus.BAD_REQUEST);
@@ -48,6 +48,14 @@ public class DetailsProcess <T extends ITransaction> {
         List<Transaction> transactionList = factory.getTransactionsDetails(listaTransacciones);
         ProductDetailsResponse productDetailsResponse = new ProductDetailsResponse();
         productDetailsResponse.setTransactions(transactionList);
+        productDetailsResponse = addProductDetails(productDetailsResponse, startDate, endDate, productId);
         return new ResponseEntity(productDetailsResponse, HttpStatus.OK);
+    }
+    private ProductDetailsResponse addProductDetails(ProductDetailsResponse productDetailsResponse, String startDate, String endDate, String productId){
+        ProductDetailsResponse finalProductDetailsResponse = productDetailsResponse;
+        finalProductDetailsResponse.setStartDate(startDate);
+        finalProductDetailsResponse.setEndDate(endDate);
+        finalProductDetailsResponse.setId(productId);
+        return finalProductDetailsResponse;
     }
 }

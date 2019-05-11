@@ -34,6 +34,7 @@ public class TransferenciasFactory implements IFactory {
         List<Transaction> transactionList = new ArrayList<>();
         for(LbTransferencesDetailPOJO detailPOJO: detailPOJOList){
             TransferenceTransaction transferenceTransaction = new TransferenceTransaction();
+            transferenceTransaction.setId(detailPOJO.getDtrAuthorizationNumber());
             transferenceTransaction.setAmount(detailPOJO.getDtrAmountTransfered());
             transferenceTransaction.setDate(detailPOJO.getDtrTransferDate().toString());
             transferenceTransaction.setDescription(detailPOJO.getDtrDescription());

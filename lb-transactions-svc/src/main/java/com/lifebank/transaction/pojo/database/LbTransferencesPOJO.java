@@ -6,7 +6,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "lb_transferences", schema = "lb_bank", catalog = "postgres")
 @IdClass(LbTransferencesPOJOPK.class)
-public class LbTransferencesI implements ITransaction {
+public class LbTransferencesPOJO implements ITransaction {
     private String traEmitterAccount;
     private String traReceiverAccount;
     private Integer traDtrId;
@@ -48,7 +48,7 @@ public class LbTransferencesI implements ITransaction {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        LbTransferencesI that = (LbTransferencesI) o;
+        LbTransferencesPOJO that = (LbTransferencesPOJO) o;
         return Objects.equals(traEmitterAccount, that.traEmitterAccount) &&
                 Objects.equals(traReceiverAccount, that.traReceiverAccount) &&
                 Objects.equals(traDtrId, that.traDtrId);

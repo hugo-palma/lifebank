@@ -12,9 +12,9 @@ public class LbTransferencesDetailPOJO {
     private Integer dtrId;
     private Timestamp dtrTransferDate;
     private Double dtrAmountTransfered;
-    private String dtrEmitterSession;
+    private String dtrAuthorizationNumber;
     private String dtrDescription;
-    private Collection<LbTransferencesI> lbTransferencesByDtrId;
+    private Collection<LbTransferencesPOJO> lbTransferencesByDtrId;
 
     @Id
     @Column(name = "dtr_id", nullable = false)
@@ -47,13 +47,13 @@ public class LbTransferencesDetailPOJO {
     }
 
     @Basic
-    @Column(name = "dtr_emitter_session", nullable = false, length = 50)
-    public String getDtrEmitterSession() {
-        return dtrEmitterSession;
+    @Column(name = "dtr_authorization_number", nullable = false, length = 50)
+    public String getDtrAuthorizationNumber() {
+        return dtrAuthorizationNumber;
     }
 
-    public void setDtrEmitterSession(String dtrEmitterSession) {
-        this.dtrEmitterSession = dtrEmitterSession;
+    public void setDtrAuthorizationNumber(String dtrAuthorizationNumber) {
+        this.dtrAuthorizationNumber = dtrAuthorizationNumber;
     }
 
     @Basic
@@ -74,23 +74,25 @@ public class LbTransferencesDetailPOJO {
         return Objects.equals(dtrId, that.dtrId) &&
                 dtrTransferDate.equals(that.dtrTransferDate)&&
                 Objects.equals(dtrAmountTransfered, that.dtrAmountTransfered) &&
-                Objects.equals(dtrEmitterSession, that.dtrEmitterSession) &&
+                Objects.equals(dtrAuthorizationNumber, that.dtrAuthorizationNumber) &&
                 Objects.equals(dtrDescription, that.dtrDescription);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(dtrId, dtrTransferDate, dtrAmountTransfered, dtrEmitterSession, dtrDescription);
+        int result = Objects.hash(dtrId, dtrTransferDate, dtrAmountTransfered, dtrAuthorizationNumber, dtrDescription);
         result = 31 * result;
         return result;
     }
 
     @OneToMany(mappedBy = "lbTransferencesDetailByTraDtrId")
-    public Collection<LbTransferencesI> getLbTransferencesByDtrId() {
+    public Collection<LbTransferencesPOJO> getLbTransferencesByDtrId() {
         return lbTransferencesByDtrId;
     }
 
-    public void setLbTransferencesByDtrId(Collection<LbTransferencesI> lbTransferencesByDtrId) {
+    public void setLbTransferencesByDtrId(Collection<LbTransferencesPOJO> lbTransferencesByDtrId) {
         this.lbTransferencesByDtrId = lbTransferencesByDtrId;
     }
+
+
 }

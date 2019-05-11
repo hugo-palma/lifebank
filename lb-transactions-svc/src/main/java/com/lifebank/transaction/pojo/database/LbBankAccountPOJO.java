@@ -11,8 +11,12 @@ public class LbBankAccountPOJO {
     private String accId;
     private Timestamp accFechaCreacion;
     private Double accMonto;
-    private Collection<LbTransferencesI> lbTransferencesByAccId;
-    private Collection<LbTransferencesI> lbTransferencesByAccId_0;
+    private Integer accCliId;
+    private LbClientPOJO lbClientByAccCliId;
+    private Collection<LbTransferencesPOJO> lbTransferencesByAccId;
+    private Collection<LbTransferencesPOJO> lbTransferencesByAccId_0;
+    private Collection<LbAccountCreditcardPaymentsPOJO> lbAccountCreditcardPaymentsByAccId;
+    private Collection<LbAccountLoanPaymentsPOJO> lbAccountLoanPaymentsByAccId;
 
     @Id
     @Column(name = "acc_id", nullable = false, length = 10)
@@ -44,6 +48,16 @@ public class LbBankAccountPOJO {
         this.accMonto = accMonto;
     }
 
+    @Basic
+    @Column(name = "acc_cli_id", nullable = false)
+    public Integer getAccCliId() {
+        return accCliId;
+    }
+
+    public void setAccCliId(Integer accCliId) {
+        this.accCliId = accCliId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -51,29 +65,59 @@ public class LbBankAccountPOJO {
         LbBankAccountPOJO that = (LbBankAccountPOJO) o;
         return Objects.equals(accId, that.accId) &&
                 Objects.equals(accFechaCreacion, that.accFechaCreacion) &&
-                Objects.equals(accMonto, that.accMonto);
+                Objects.equals(accMonto, that.accMonto) &&
+                Objects.equals(accCliId, that.accCliId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(accId, accFechaCreacion, accMonto);
+        return Objects.hash(accId, accFechaCreacion, accMonto, accCliId);
     }
 
+    @ManyToOne
+    @JoinColumn(name = "acc_cli_id", referencedColumnName = "cli_id", nullable = false, insertable = false, updatable = false)
+    public LbClientPOJO getLbClientByAccCliId() {
+        return lbClientByAccCliId;
+    }
+
+    public void setLbClientByAccCliId(LbClientPOJO lbClientByAccCliId) {
+        this.lbClientByAccCliId = lbClientByAccCliId;
+    }
+
+
     @OneToMany(mappedBy = "lbBankAccountByTraEmitterAccount")
-    public Collection<LbTransferencesI> getLbTransferencesByAccId() {
+    public Collection<LbTransferencesPOJO> getLbTransferencesByEmitterAccId() {
         return lbTransferencesByAccId;
     }
 
-    public void setLbTransferencesByAccId(Collection<LbTransferencesI> lbTransferencesByAccId) {
+    public void setLbTransferencesByEmitterAccId(Collection<LbTransferencesPOJO> lbTransferencesByAccId) {
         this.lbTransferencesByAccId = lbTransferencesByAccId;
     }
 
     @OneToMany(mappedBy = "lbBankAccountByTraReceiverAccount")
-    public Collection<LbTransferencesI> getLbTransferencesByAccId_0() {
+    public Collection<LbTransferencesPOJO> getLbTransferencesByReceiverAccId_0() {
         return lbTransferencesByAccId_0;
     }
 
-    public void setLbTransferencesByAccId_0(Collection<LbTransferencesI> lbTransferencesByAccId_0) {
+    public void setLbTransferencesByReceiverAccId_0(Collection<LbTransferencesPOJO> lbTransferencesByAccId_0) {
         this.lbTransferencesByAccId_0 = lbTransferencesByAccId_0;
+    }
+
+    @OneToMany(mappedBy = "lbBankAccountByAcpAccId")
+    public Collection<LbAccountCreditcardPaymentsPOJO> getLbAccountCreditcardPaymentsByAccId() {
+        return lbAccountCreditcardPaymentsByAccId;
+    }
+
+    public void setLbAccountCreditcardPaymentsByAccId(Collection<LbAccountCreditcardPaymentsPOJO> lbAccountCreditcardPaymentsByAccId) {
+        this.lbAccountCreditcardPaymentsByAccId = lbAccountCreditcardPaymentsByAccId;
+    }
+
+    @OneToMany(mappedBy = "lbBankAccountByAlpAccId")
+    public Collection<LbAccountLoanPaymentsPOJO> getLbAccountLoanPaymentsByAccId() {
+        return lbAccountLoanPaymentsByAccId;
+    }
+
+    public void setLbAccountLoanPaymentsByAccId(Collection<LbAccountLoanPaymentsPOJO> lbAccountLoanPaymentsByAccId) {
+        this.lbAccountLoanPaymentsByAccId = lbAccountLoanPaymentsByAccId;
     }
 }

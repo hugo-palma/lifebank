@@ -11,6 +11,7 @@ public abstract class Transaction {
     private String description;
     @JsonProperty("amount")
     private Double amount;
+
     @JsonProperty("id")
 
     public String getId() {

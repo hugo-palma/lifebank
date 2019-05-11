@@ -2,7 +2,7 @@ package com.lifebank.transaction.controller;
 
 import com.lifebank.transaction.factory.IFactory;
 import com.lifebank.transaction.factory.TransferenciasFactory;
-import com.lifebank.transaction.pojo.database.LbTransferencesI;
+import com.lifebank.transaction.pojo.database.LbTransferencesPOJO;
 import com.lifebank.transaction.process.DetailsProcess;
 import com.lifebank.transaction.repository.BankAccountsRepository;
 import com.lifebank.transaction.repository.TransferenceDetailsRepository;
@@ -31,7 +31,7 @@ public class DetailsController {
                                             @RequestParam("start") String startDate,
                                             @RequestParam("end") String endDate,
                                             @RequestParam("prd") String prd){
-        DetailsProcess<LbTransferencesI> detailsProcess;
+        DetailsProcess<LbTransferencesPOJO> detailsProcess;
         IFactory factory;
         switch (prd){
             case KEY_CREDIT:
@@ -53,6 +53,6 @@ public class DetailsController {
                 return new ResponseEntity<>("No existe Producto", HttpStatus.BAD_REQUEST);
 
         }
-        return detailsProcess.process(accountID);
+        return detailsProcess.process(accountID, startDate, endDate);
     }
 }
