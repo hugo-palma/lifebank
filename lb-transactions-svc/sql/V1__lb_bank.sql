@@ -1,4 +1,3 @@
-
 drop TABLE if exists lb_bank.lb_transferences;
 drop TABLE if exists lb_bank.lb_transferences_detail;
 drop table if exists lb_bank.lb_account_loan_payments;

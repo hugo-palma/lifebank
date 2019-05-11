@@ -6,7 +6,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "lb_account_creditcard_payments", schema = "lb_bank", catalog = "postgres")
 @IdClass(LbAccountCreditcardPaymentsPOJOPK.class)
-public class LbAccountCreditcardPaymentsPOJO {
+public class LbAccountCreditcardPaymentsPOJO extends TransactionBlueprint implements ITransaction {
     private String acpAccId;
     private Integer acpCreId;
     private Integer acpCpdId;
@@ -87,5 +87,20 @@ public class LbAccountCreditcardPaymentsPOJO {
 
     public void setLbCreditcardPaymentsDetailsByAcpCpdId(LbCreditcardPaymentsDetailsPOJO lbCreditcardPaymentsDetailsByAcpCpdId) {
         this.lbCreditcardPaymentsDetailsByAcpCpdId = lbCreditcardPaymentsDetailsByAcpCpdId;
+    }
+    @Transient
+    @Override
+    public String getSender() {
+        return acpAccId;
+    }
+    @Transient
+    @Override
+    public String getReceiver() {
+        return acpCreId.toString();
+    }
+    @Transient
+    @Override
+    public String getDetails() {
+        return acpCpdId.toString();
     }
 }

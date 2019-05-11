@@ -2,6 +2,7 @@ package com.lifebank.transaction.pojo.response.transactions;
 
 import com.fasterxml.jackson.annotation.*;
 import com.lifebank.transaction.pojo.database.ITransaction;
+import com.sun.org.apache.bcel.internal.generic.IREM;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Map;
         "endDate",
         "transactions"
 })
-public class ProductDetailsResponse {
+public class BankAccountResponse implements IResponse {
 
     @JsonProperty("id")
     private String id;
@@ -25,7 +26,7 @@ public class ProductDetailsResponse {
     @JsonProperty("transactions")
     private List<Transaction> transactions = null;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
 
     @JsonProperty("id")
     public String getId() {
