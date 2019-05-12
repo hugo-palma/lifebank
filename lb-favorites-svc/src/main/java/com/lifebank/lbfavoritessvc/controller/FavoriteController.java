@@ -6,10 +6,10 @@ import com.lifebank.lbfavoritessvc.pojo.database.LbLoansPOJO;
 import com.lifebank.lbfavoritessvc.pojo.request.AddFavorite;
 import com.lifebank.lbfavoritessvc.pojo.request.UpdateFavoriteEmailOnly;
 import com.lifebank.lbfavoritessvc.process.AddFavoriteProcess;
+import com.lifebank.lbfavoritessvc.process.DeleteFavoriteProcess;
 import com.lifebank.lbfavoritessvc.process.UpdateFavoriteProcess;
 import com.lifebank.lbfavoritessvc.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -63,6 +63,12 @@ public class FavoriteController {
         updateFavoriteEmailOnly.setId(beneficiaryId);
         UpdateFavoriteProcess updateFavoriteProcess = new UpdateFavoriteProcess(favoriteRepository, clientRepository);
         return updateFavoriteProcess.process(updateFavoriteEmailOnly, clientId);
+    }
+    @DeleteMapping("${request-mapping.delete-favorite}")
+    public ResponseEntity deleteFavorite(@PathVariable("beneficiaryId") String beneficiaryId,
+                                         @RequestHeader("clientId")String clientId){
+        DeleteFavoriteProcess deleteFavoriteProcess = new DeleteFavoriteProcess(favoriteRepository);
+        return deleteFavoriteProcess.process(clientId, beneficiaryId);
     }
 
 }
