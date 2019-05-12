@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lb-transactions-svc" />
+        <module name="lb-favorites-svc" />
         <module name="lb-bank-accounts-svc" />
+        <module name="lb-transactions-svc" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="lb-bank-accounts-svc" options="-parameters" />
+      <module name="lb-favorites-svc" options="-parameters" />
       <module name="lb-transactions-svc" options="-parameters" />
     </option>
   </component>

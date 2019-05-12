@@ -12,8 +12,6 @@ import com.lifebank.transaction.factory.response.AccountResponseFactory;
 import com.lifebank.transaction.factory.response.CreditCardResponseFactory;
 import com.lifebank.transaction.factory.response.IResponseFactory;
 import com.lifebank.transaction.factory.response.LoanResponseFactory;
-import com.lifebank.transaction.pojo.response.transactions.IResponse;
-import com.lifebank.transaction.pojo.response.transactions.LoanResponse;
 import com.lifebank.transaction.process.DetailsProcess;
 import com.lifebank.transaction.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;

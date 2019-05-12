@@ -24,10 +24,14 @@ CREATE TABLE lb_bank.lb_client
 
 CREATE TABLE lb_bank.lb_favorites
 (
- fav_id            int NOT NULL ,
- fav_creation_date bytea NOT NULL ,
+ fav_id            serial NOT NULL ,
+ fav_creation_date timestamp NOT NULL ,
  fav_state         varchar(1) NOT NULL ,
  fav_cli_id        int NOT NULL ,
+ fav_product_type  varchar(20) NOT NULL ,
+ fav_product_code  varchar(50) NOT NULL ,
+ fav_email         varchar(50) NOT NULL ,
+ fav_name          varchar(50) NOT NULL ,
 
 
  CONSTRAINT PK_lb_favorites PRIMARY KEY (fav_id),
