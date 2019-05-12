@@ -4,10 +4,12 @@ import com.lifebank.transaction.collector.AccountTransactionsCollector;
 import com.lifebank.transaction.collector.CardTransactionsCollector;
 import com.lifebank.transaction.collector.ITransactionCollector;
 import com.lifebank.transaction.collector.LoanTransactionsCollector;
+import com.lifebank.transaction.factory.CreditCardFactory;
 import com.lifebank.transaction.factory.IFactory;
 import com.lifebank.transaction.factory.AccountFactory;
 import com.lifebank.transaction.factory.PrestamosFactory;
 import com.lifebank.transaction.factory.response.AccountResponseFactory;
+import com.lifebank.transaction.factory.response.CreditCardResponseFactory;
 import com.lifebank.transaction.factory.response.IResponseFactory;
 import com.lifebank.transaction.factory.response.LoanResponseFactory;
 import com.lifebank.transaction.pojo.response.transactions.IResponse;
@@ -16,6 +18,7 @@ import com.lifebank.transaction.process.DetailsProcess;
 import com.lifebank.transaction.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,11 +32,22 @@ public class DetailsController {
     private TransferenceDetailsRepository transferenceDetailsRepository;
     private TransferencesRepository transferencesRepository;
     private LoanPaymentsDetailsRepository loanPaymentsDetailsRepository;
+    private CardPaymentsRepository cardPaymentsRepository;
+    private CardsRepository cardsRepository;
     private LoanRepository loanRepository;
     private Environment env;
 
     @Autowired
-    public DetailsController(BankAccountsRepository bankAccountsRepository, AccountsPayLoansRepository accountsPayLoansRepository, AccountsPayCardsRepository accountsPayCardsRepository, TransferenceDetailsRepository transferenceDetailsRepository, TransferencesRepository transferencesRepository, LoanPaymentsDetailsRepository loanPaymentsDetailsRepository, LoanRepository loanRepository, Environment env) {
+    public DetailsController(BankAccountsRepository bankAccountsRepository,
+                             AccountsPayLoansRepository accountsPayLoansRepository,
+                             AccountsPayCardsRepository accountsPayCardsRepository,
+                             TransferenceDetailsRepository transferenceDetailsRepository,
+                             TransferencesRepository transferencesRepository,
+                             LoanPaymentsDetailsRepository loanPaymentsDetailsRepository,
+                             LoanRepository loanRepository,
+                             CardPaymentsRepository cardPaymentsRepository,
+                             CardsRepository cardsRepository,
+                             Environment env) {
         this.bankAccountsRepository = bankAccountsRepository;
         this.accountsPayLoansRepository = accountsPayLoansRepository;
         this.accountsPayCardsRepository = accountsPayCardsRepository;
@@ -41,6 +55,8 @@ public class DetailsController {
         this.transferencesRepository = transferencesRepository;
         this.loanPaymentsDetailsRepository = loanPaymentsDetailsRepository;
         this.loanRepository = loanRepository;
+        this.cardPaymentsRepository = cardPaymentsRepository;
+        this.cardsRepository = cardsRepository;
         this.env = env;
     }
 
@@ -58,32 +74,31 @@ public class DetailsController {
         ITransactionCollector iTransactionCollector;
         IFactory factory;
         IResponseFactory responseFactory;
+        JpaRepository productRepository;
         switch (prd){
             case KEY_CREDIT:
-                //TODO:Cambiar repositorio
-                iTransactionCollector = new CardTransactionsCollector();
-                factory = new AccountFactory(env, transferenceDetailsRepository);
-                responseFactory = new AccountResponseFactory();
-                detailsProcess = new DetailsProcess(bankAccountsRepository, iTransactionCollector, factory, responseFactory);
+                iTransactionCollector = new CardTransactionsCollector(cardPaymentsRepository);
+                factory = new CreditCardFactory();
+                responseFactory = new CreditCardResponseFactory();
+                productRepository = cardsRepository;
                 break;
             case KEY_LOAN:
-                //TODO:Cambiar repositorio
                 iTransactionCollector = new LoanTransactionsCollector(accountsPayLoansRepository);
                 factory = new PrestamosFactory(loanPaymentsDetailsRepository);
                 responseFactory = new LoanResponseFactory();
-                detailsProcess = new DetailsProcess(loanRepository, iTransactionCollector, factory, responseFactory);
+                productRepository = loanRepository;
                 break;
             case KEY_ACCOUNT:
-                //TODO:Cambiar repositorio
                 iTransactionCollector = new AccountTransactionsCollector(transferencesRepository, accountsPayLoansRepository, accountsPayCardsRepository);
                 factory = new AccountFactory(env, transferenceDetailsRepository);
                 responseFactory = new AccountResponseFactory();
-                detailsProcess = new DetailsProcess(bankAccountsRepository, iTransactionCollector, factory, responseFactory);
+                productRepository = bankAccountsRepository;
                 break;
             default:
                 return new ResponseEntity<>("No existe Producto", HttpStatus.BAD_REQUEST);
 
         }
+        detailsProcess = new DetailsProcess(productRepository, iTransactionCollector, factory, responseFactory);
         return detailsProcess.process(accountID, startDate, endDate);
     }
 }

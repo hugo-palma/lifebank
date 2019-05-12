@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "lb_card_payments", schema = "lb_bank", catalog = "postgres")
-public class LbCardPaymentsPOJO {
+public class LbCardPaymentsPOJO implements ITransaction{
     private Integer cpaId;
     private Integer cpaCreId;
     private Double cpaPaymentAmount;
@@ -101,5 +101,23 @@ public class LbCardPaymentsPOJO {
 
     public void setLbCreditCardsByCpaCreId(LbCreditCardsPOJO lbCreditCardsByCpaCreId) {
         this.lbCreditCardsByCpaCreId = lbCreditCardsByCpaCreId;
+    }
+
+    @Override
+    @Transient
+    public String getSender() {
+        return cpaCreId.toString();
+    }
+
+    @Override
+    @Transient
+    public String getReceiver() {
+        return null;
+    }
+
+    @Override
+    @Transient
+    public String getDetails() {
+        return cpaId.toString();
     }
 }

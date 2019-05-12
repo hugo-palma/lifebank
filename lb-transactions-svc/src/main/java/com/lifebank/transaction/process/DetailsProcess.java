@@ -5,7 +5,6 @@ import com.lifebank.transaction.factory.IFactory;
 import com.lifebank.transaction.factory.response.IResponseFactory;
 import com.lifebank.transaction.pojo.database.ITransaction;
 import com.lifebank.transaction.pojo.database.TransactionBlueprint;
-import com.lifebank.transaction.pojo.response.transactions.BankAccountResponse;
 import com.lifebank.transaction.pojo.response.transactions.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.HttpStatus;

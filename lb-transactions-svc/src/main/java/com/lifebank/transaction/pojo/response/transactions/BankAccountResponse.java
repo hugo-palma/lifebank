@@ -16,7 +16,6 @@ import java.util.Map;
         "transactions"
 })
 public class BankAccountResponse implements IResponse {
-
     @JsonProperty("id")
     private String id;
     @JsonProperty("startDate")
