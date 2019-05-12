@@ -6,6 +6,7 @@
     <ignored path="$PROJECT_DIR$/lb-bank-accounts-svc/target/" />
     <ignored path="$PROJECT_DIR$/lb-transactions-svc/target/" />
     <ignored path="$PROJECT_DIR$/lb-favorites-svc/target/" />
+    <ignored path="$PROJECT_DIR$/lb-products-svc/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +64,16 @@
         <item name="lb_bank: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lb_bank: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lb_loans: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
     </expand>
     <select />
   </component>
@@ -71,29 +82,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/process/ProductsProcess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbBankAccountPOJO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/CreditCardAccountFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/controller/FavoriteController.java">
+        <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/controller/ProductsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/process/DeleteFavoriteProcess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/process/UpdateFavoriteProcess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+            <state relative-caret-position="249">
+              <caret line="40" column="47" lean-forward="true" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,22 +128,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/repository/FavoriteRepository.java">
+        <entry file="file://$PROJECT_DIR$/lb-transactions-svc/sql/V1__lb_bank.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+            <state relative-caret-position="110">
+              <caret line="212" selection-start-line="212" selection-end-line="212" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/ProductsResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
+                <element signature="e#806#807#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/Personal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,8 +177,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -148,27 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/factory/CreditoFactory.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/repository/TransferenceDetailsRepository.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/repository/BankAccountsRepository.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/LbTransactionsSvcApplication.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/repository/TransaccionesRepository.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/TransactionPOJO.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/TransactionBlueprint.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/factory/CreditCardFactory.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/factory/PrestamosFactory.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/ITransaction.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/response/transactions/ProductDetailsResponse.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/decorator/DetailsDecorator.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/process/DetailsProcess.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/response/transactions/Transaction.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/factory/TransferenciasFactory.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/factory/IFactory.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbTransferencesPOJO.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbTransferencesI.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbTransferencesDetailPOJO.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/repository/TransferencesRepository.java" />
         <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbBankAccountPOJO.java" />
         <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbCardPaymentsPOJO.java" />
         <option value="$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbAccountLoanPaymentsPOJO.java" />
@@ -189,7 +218,6 @@
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/pojo/database/LbBankAccountPOJO.java" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/pojo/request/AddFavorite.java" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/process/AddFavoriteProcess.java" />
-        <option value="$PROJECT_DIR$/lb-transactions-svc/sql/V1__lb_bank.sql" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/pojo/database/LbFavoritesPOJO.java" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/pojo/request/UpdateFavoriteDTO.java" />
@@ -199,6 +227,28 @@
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/process/UpdateFavoriteProcess.java" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/process/DeleteFavoriteProcess.java" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/controller/FavoriteController.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/pom.xml" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbBankAccountPOJO.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbCreditCardsPOJO.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbLoansPOJO.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/IResponseFactory.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/ProductsResponse.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/CreditCard.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/Loan.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/Personal.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/Accounts.java" />
+        <option value="$PROJECT_DIR$/lb-transactions-svc/sql/V1__lb_bank.sql" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/AccountCatalogRepository.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/CreditCardAccountFactory.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/BankAccountFactory.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/LoanAccountFactory.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/ClientRepository.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/process/ProductsProcess.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/AccountRepository.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/CardRepository.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/LoanRepository.java" />
+        <option value="$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/controller/ProductsController.java" />
       </list>
     </option>
   </component>
@@ -210,7 +260,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -221,118 +271,149 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lifebank" type="58d84e3e:PackageViewProjectNode" />
+              <item name="lb-favorites-svc" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="lifebank" type="58d84e3e:PackageViewProjectNode" />
+              <item name="lb-favorites-svc" type="616d4139:PackageViewModuleNode" />
+              <item name="com.lifebank.lbfavoritessvc" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name=".mvn" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lbfavoritessvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lbfavoritessvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lbproductssvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lbproductssvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lbproductssvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="factory" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lbproductssvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="pojo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lbfavoritessvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lbproductssvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="pojo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="database" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="response" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lbfavoritessvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pojo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="request" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lbfavoritessvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lbproductssvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="process" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lbfavoritessvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lbproductssvc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="repository" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-favorites-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="lb-products-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
@@ -345,106 +426,6 @@
               <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="sql" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="transaction" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="transaction" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="transaction" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pojo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lifebank" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="transaction" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="repository" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="lb-transactions-svc" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lifebank" type="58d84e3e:PackageViewProjectNode" />
-              <item name="lb-favorites-svc" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="lifebank" type="58d84e3e:PackageViewProjectNode" />
-              <item name="lb-favorites-svc" type="616d4139:PackageViewModuleNode" />
-              <item name="com.lifebank.lbfavoritessvc" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -538,22 +519,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lb-products-svc/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31323528" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lifebank.lbfavoritessvc.repository" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.lifebank.lbproductssvc.pojo" />
       <recent name="com.lifebank.lbfavoritessvc.pojo.database" />
       <recent name="" />
       <recent name="com.lifebank.transaction.pojo.database" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.lifebank.lbfavoritessvc.repository" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\lifebank\lb-products-svc\src\main\resources" />
       <recent name="C:\lifebank\lb-favorites-svc\src\main\java\com\lifebank\lbfavoritessvc\repository" />
       <recent name="C:\lifebank\lb-favorites-svc\src\main\resources" />
     </key>
@@ -570,7 +553,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.LbFavoritesSvcApplication">
+  <component name="RunManager" selected="Spring Boot.LbProductsSvcApplication">
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -632,6 +615,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LbProductsSvcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lb-products-svc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lifebank.lbproductssvc.LbProductsSvcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LbTransactionsSvcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="lb-transactions-svc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lifebank.transaction.LbTransactionsSvcApplication" />
@@ -652,20 +642,21 @@
       <updated>1557453761211</updated>
       <workItem from="1557453763784" duration="44948000" />
       <workItem from="1557680310434" duration="4327000" />
+      <workItem from="1557690687272" duration="7019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49275000" />
+    <option name="totallyTimeSpent" value="56294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49819493" visible="true" weight="0.20134228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.20402685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" sideWeight="0.50180507" side_tool="true" visible="true" weight="0.1988273" />
+      <window_info id="Persistence" order="3" sideWeight="0.504717" side_tool="true" weight="0.20402685" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -674,7 +665,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -805,214 +796,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://DATABASE/a455e0e6-efb8-441f-85d5-de575b713708.SCHEMA:postgres.lb_bank">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>a455e0e6-efb8-441f-85d5-de575b713708.SCHEMA:postgres.lb_bank</OriginalElement>
-          <nodes>
-            <node x="" y="">a455e0e6-efb8-441f-85d5-de575b713708.TABLE:postgres.lb_bank.lb_transferences_detail</node>
-            <node x="" y="">a455e0e6-efb8-441f-85d5-de575b713708.TABLE:postgres.lb_bank.lb_transferences</node>
-            <node x="" y="">a455e0e6-efb8-441f-85d5-de575b713708.TABLE:postgres.lb_bank.lb_bank_account</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="251.0" y="146.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbClientPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="20" lean-forward="true" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/factory/IFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/TransactionBlueprint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding>
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/response/transactions/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/ITransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbTransferencesPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbTransferencesI.java" />
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbTransferencesDetailPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#2816#2817#0" expanded="true" />
-            <element signature="e#2861#2862#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/repository/TransferencesRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbBankAccountPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding>
-            <element signature="e#2474#2475#0" expanded="true" />
-            <element signature="e#2515#2516#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-            <element signature="e#2649#2650#0" expanded="true" />
-            <element signature="e#2793#2794#0" expanded="true" />
-            <element signature="e#2838#2839#0" expanded="true" />
-            <element signature="e#3161#3162#0" expanded="true" />
-            <element signature="e#3208#3209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbCardPaymentsPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbLoanPaymentsDetailsPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbAccountLoanPaymentsPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbLoansPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbAccountCreditcardPaymentsPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="62" column="125" selection-start-line="62" selection-start-column="125" selection-end-line="62" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbFavoritesPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/java/com/lifebank/transaction/pojo/database/LbCreditCardsPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="141" column="125" selection-start-line="141" selection-start-column="125" selection-end-line="141" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/resources/application-local.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application-local.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/LbFavoritesSvcApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/repository/TransferencesRepository.java" />
     <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/repository/BankAccountsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1082,13 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/sql/V1__lb_bank.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/pojo/request/AddFavorite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -1141,23 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/repository/FavoriteRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/pojo/request/UpdateFavoriteEmailOnly.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1175,10 +934,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/process/UpdateFavoriteProcess.java">
+    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/controller/FavoriteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+        <state relative-caret-position="594">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1192,10 +951,298 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/controller/FavoriteController.java">
+    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/process/UpdateFavoriteProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        <state relative-caret-position="440">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/java/com/lifebank/lbfavoritessvc/repository/FavoriteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application-local.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/resources/application-local.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-favorites-svc/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbCreditCardsPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="120" column="125" selection-start-line="120" selection-start-column="125" selection-end-line="120" selection-end-column="125" />
+          <folding>
+            <element signature="e#3778#3779#0" expanded="true" />
+            <element signature="e#3819#3820#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbLoansPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbClientPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1203">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/CreditCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/Loan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/Accounts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1437#1438#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/ProductsResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/AccountCatalogRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="96" lean-forward="true" selection-start-line="5" selection-start-column="96" selection-end-line="5" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/BankAccountFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/LoanAccountFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/response/Personal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/CreditCardAccountFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/pojo/LbBankAccountPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/AccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/process/ProductsProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/ClientRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/factory/IAccountsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-transactions-svc/sql/V1__lb_bank.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/CardRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/repository/LoanRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lb-products-svc/src/main/java/com/lifebank/lbproductssvc/controller/ProductsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="40" column="47" lean-forward="true" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,7 +1296,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>JPA|lb-favorites-svc</last-edited>
+          <last-edited>JPA|lb-products-svc</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

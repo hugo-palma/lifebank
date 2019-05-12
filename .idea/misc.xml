@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/lb-transactions-svc/pom.xml" />
         <option value="$PROJECT_DIR$/lb-bank-accounts-svc/pom.xml" />
         <option value="$PROJECT_DIR$/lb-favorites-svc/pom.xml" />
+        <option value="$PROJECT_DIR$/lb-products-svc/pom.xml" />
       </list>
     </option>
   </component>

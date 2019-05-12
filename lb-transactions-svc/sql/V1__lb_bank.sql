@@ -1,3 +1,4 @@
+drop TABLE if exists lb_bank.lb_account_catalog;
 drop TABLE if exists lb_bank.lb_transferences;
 drop TABLE if exists lb_bank.lb_transferences_detail;
 drop table if exists lb_bank.lb_account_loan_payments;
@@ -10,6 +11,14 @@ drop table if exists lb_bank.lb_credit_cards;
 drop table if exists lb_bank.lb_bank_account;
 drop table if exists lb_bank.lb_favorites;
 drop table if exists lb_bank.lb_client;
+
+CREATE TABLE lb_bank.lb_account_catalog
+(
+ aca_id       serial NOT NULL ,
+ aca_name     varchar(100) NOT null,
+
+ CONSTRAINT PK_lb_account_catalog PRIMARY KEY (aca_id)
+);
 
 CREATE TABLE lb_bank.lb_client
 (
@@ -197,6 +206,11 @@ CREATE TABLE lb_bank.lb_account_creditcard_payments
 
 
 --INSERTS
+--Cuentas
+insert into lb_bank.lb_account_catalog (aca_name) values('Cuenta personal');
+insert into lb_bank.lb_account_catalog (aca_name) values('Tarjeta de credito Personal');
+insert into lb_bank.lb_account_catalog (aca_name) values('Prestamo');
+
 --clientes
 INSERT INTO lb_bank.lb_client
 (cli_id, cli_mail, cli_password, cli_document, cli_username)
