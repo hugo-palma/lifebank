@@ -4,11 +4,10 @@ import com.lifebank.lbfavoritessvc.pojo.database.LbBankAccountPOJO;
 import com.lifebank.lbfavoritessvc.pojo.database.LbCreditCardsPOJO;
 import com.lifebank.lbfavoritessvc.pojo.database.LbLoansPOJO;
 import com.lifebank.lbfavoritessvc.pojo.request.AddFavorite;
+import com.lifebank.lbfavoritessvc.pojo.request.UpdateFavoriteEmailOnly;
 import com.lifebank.lbfavoritessvc.process.AddFavoriteProcess;
-import com.lifebank.lbfavoritessvc.repository.BankAccountsRepository;
-import com.lifebank.lbfavoritessvc.repository.CardsRepository;
-import com.lifebank.lbfavoritessvc.repository.FavoriteRepository;
-import com.lifebank.lbfavoritessvc.repository.LoanRepository;
+import com.lifebank.lbfavoritessvc.process.UpdateFavoriteProcess;
+import com.lifebank.lbfavoritessvc.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.HttpStatus;
@@ -29,13 +28,14 @@ public class FavoriteController {
     private LoanRepository loanRepository;
     private CardsRepository cardsRepository;
     private BankAccountsRepository bankAccountsRepository;
-
+    private ClientRepository clientRepository;
     @Autowired
-    public FavoriteController(FavoriteRepository favoriteRepository, LoanRepository loanRepository, CardsRepository cardsRepository, BankAccountsRepository bankAccountsRepository) {
+    public FavoriteController(FavoriteRepository favoriteRepository, LoanRepository loanRepository, CardsRepository cardsRepository, BankAccountsRepository bankAccountsRepository, ClientRepository clientRepository) {
         this.favoriteRepository = favoriteRepository;
         this.loanRepository = loanRepository;
         this.cardsRepository = cardsRepository;
         this.bankAccountsRepository = bankAccountsRepository;
+        this.clientRepository = clientRepository;
     }
 
     @PostMapping("${request-mapping.add-favorite}")
@@ -55,7 +55,14 @@ public class FavoriteController {
                 return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
         return addFavoriteProcess.process(addFavorite, clientId);
-
+    }
+    @PatchMapping("${request-mapping.update-favorite}")
+    public ResponseEntity updateFavorite(@RequestBody UpdateFavoriteEmailOnly updateFavoriteEmailOnly,
+                                         @PathVariable("beneficiaryId") String beneficiaryId,
+                                         @RequestHeader("clientId")String clientId){
+        updateFavoriteEmailOnly.setId(beneficiaryId);
+        UpdateFavoriteProcess updateFavoriteProcess = new UpdateFavoriteProcess(favoriteRepository, clientRepository);
+        return updateFavoriteProcess.process(updateFavoriteEmailOnly, clientId);
     }
 
 }
