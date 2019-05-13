@@ -203,6 +203,16 @@ CREATE TABLE lb_bank.lb_account_creditcard_payments
 );
 
 
+CREATE TABLE lb_bank.lb_authorization_registry
+(
+ are_id       serial NOT NULL ,
+ are_client_id     varchar(100) NOT null,
+ are_client_ip	   varchar(100) not null,
+ are_creation_date timestamp not null,
+
+ CONSTRAINT PK_lb_authorization_registry PRIMARY KEY (are_id)
+);
+
 
 
 --INSERTS
@@ -275,36 +285,3 @@ INSERT INTO lb_bank.lb_bank_account
 (acc_id, acc_fecha_creacion, acc_monto, acc_cli_id)
 VALUES('10', '2001-02-04 02:25:54.348', 0.1029066752, 7);
 --Detalles transferencias
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(1, '2000-01-01 00:00:00.000', 120.12, 'dca6a1e1-f9cd-45f1-b151-6e095753fe80', 'ru');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(2, '2000-01-01 00:00:00.000', 54.64, '78c1815c-01a5-4dff-ad61-1ad8c2c0fbb5', 'giat nulla pa');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(3, '2000-01-01 00:00:00.000', 1240.48, 'd855bd28-bb2f-49f3-b7c9-06b9d7d2dc5a', 'in reprehender');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(4, '2000-01-01 00:00:00.000', 0.234795024, '4175baa5-b034-430e-b49e-cb36a3468a97', 'up');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(5, '2000-01-01 00:00:00.000', 0.525511616, 'ec5555ba-6be9-48b1-b5b1-5944326545e4', 'mod tempor incididu');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(6, '2000-01-01 00:00:00.000', 0.332424448, '9aa94edb-f247-49ce-a69e-420647e7b55c', 'e ve');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(7, '2000-01-01 00:00:00.000', 0.155315904, 'e7489b12-d5a8-45d6-9583-12bff25a8f53', 'labore et');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(8, '2000-01-01 00:00:00.000', 0.1105631744, '977f8c69-d799-44e7-bc07-87c14853b703', 'llamco laboris nis');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(9, '2000-01-01 00:00:00.000', 0.277153984, '461a7e74-6ad3-4531-b30f-315c93a32540', 'atur.');
-INSERT INTO lb_bank.lb_transferences_detail
-(dtr_id, dtr_transfer_date, dtr_amount_transfered, dtr_authorization_number, dtr_description)
-VALUES(10, '2000-01-01 00:00:00.000', 0.161364896, '5225ccde-5464-4766-aab1-48281351a015', 'i ');
---transacciones
-insert into lb_bank.lb_transferences values('0123456789', '0123456790', 1);
-insert into lb_bank.lb_transferences values('0123456790', '0123456789', 1);

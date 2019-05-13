@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lb-favorites-svc" />
+        <module name="lb-payments-svc" />
         <module name="lb-bank-accounts-svc" />
         <module name="lb-products-svc" />
         <module name="lb-transactions-svc" />
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="lb-bank-accounts-svc" options="-parameters" />
       <module name="lb-favorites-svc" options="-parameters" />
+      <module name="lb-payments-svc" options="-parameters" />
       <module name="lb-products-svc" options="-parameters" />
       <module name="lb-transactions-svc" options="-parameters" />
     </option>

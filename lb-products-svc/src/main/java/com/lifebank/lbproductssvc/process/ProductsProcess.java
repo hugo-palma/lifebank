@@ -60,13 +60,8 @@ public class ProductsProcess {
         Accounts accounts = new Accounts();
 
         //Creando cuentas de respuesta
-        BankAccountFactory bankAccountFactory = new BankAccountFactory();
         accounts.setPersonal(bankAccountFactory.getAccounts(accountPOJOList, personalAccountName));
-
-        CreditCardAccountFactory creditCardAccountFactory = new CreditCardAccountFactory();
         accounts.setCreditCard(creditCardAccountFactory.getAccounts(creditCardsPOJOSList, creditCardAccountName));
-
-        LoanAccountFactory loanAccountFactory = new LoanAccountFactory();
         accounts.setLoan(loanAccountFactory.getAccounts(loansPOJOList, loanAccountName));
 
         productsResponse.setAccounts(accounts);

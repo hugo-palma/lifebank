@@ -9,7 +9,7 @@
       <Comment>default administrative connection database</Comment>
       <StateNumber>567</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>598</IntrospectionStateNumber>
+      <IntrospectionStateNumber>601</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16432|16434|1
@@ -19,6 +19,7 @@ sequence|table|24660|24662|1
 sequence|table|24668|24670|1
 sequence|table|24691|24693|1
 sequence|table|32860|32862|1
+sequence|table|32868|32870|1
 </Relations>
     </database>
     <role id="3" parent="1" name="pg_execute_server_program">
@@ -81,7 +82,7 @@ sequence|table|32860|32862|1
       <ObjectId>16468</ObjectId>
       <StateNumber>579</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>599</IntrospectionStateNumber>
+      <IntrospectionStateNumber>602</IntrospectionStateNumber>
       <Visible>1</Visible>
     </schema>
     <schema id="14" parent="2" name="mp_proxy_mail_svc">
@@ -191,7 +192,15 @@ sequence|table|32860|32862|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="29" parent="13" name="lb_client_cli_id_seq">
+    <sequence id="29" parent="13" name="lb_authorization_registry_are_id_seq">
+      <ObjectId>32868</ObjectId>
+      <StateNumber>600</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="30" parent="13" name="lb_client_cli_id_seq">
       <ObjectId>24660</ObjectId>
       <StateNumber>584</StateNumber>
       <Owner>postgres</Owner>
@@ -199,7 +208,7 @@ sequence|table|32860|32862|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="30" parent="13" name="lb_favorites_fav_id_seq">
+    <sequence id="31" parent="13" name="lb_favorites_fav_id_seq">
       <ObjectId>24668</ObjectId>
       <StateNumber>584</StateNumber>
       <Owner>postgres</Owner>
@@ -207,7 +216,7 @@ sequence|table|32860|32862|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="31" parent="13" name="lb_transferences_detail_dtr_id_seq">
+    <sequence id="32" parent="13" name="lb_transferences_detail_dtr_id_seq">
       <ObjectId>24691</ObjectId>
       <StateNumber>584</StateNumber>
       <Owner>postgres</Owner>
@@ -215,72 +224,77 @@ sequence|table|32860|32862|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="32" parent="13" name="lb_account_catalog">
+    <table id="33" parent="13" name="lb_account_catalog">
       <ObjectId>32862</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>597</StateNumber>
     </table>
-    <table id="33" parent="13" name="lb_account_creditcard_payments">
+    <table id="34" parent="13" name="lb_account_creditcard_payments">
       <ObjectId>24779</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="34" parent="13" name="lb_account_loan_payments">
+    <table id="35" parent="13" name="lb_account_loan_payments">
       <ObjectId>24759</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="35" parent="13" name="lb_bank_account">
+    <table id="36" parent="13" name="lb_authorization_registry">
+      <ObjectId>32870</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>600</StateNumber>
+    </table>
+    <table id="37" parent="13" name="lb_bank_account">
       <ObjectId>24681</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="36" parent="13" name="lb_card_payments">
+    <table id="38" parent="13" name="lb_card_payments">
       <ObjectId>24749</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="37" parent="13" name="lb_client">
+    <table id="39" parent="13" name="lb_client">
       <ObjectId>24662</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="38" parent="13" name="lb_credit_cards">
+    <table id="40" parent="13" name="lb_credit_cards">
       <ObjectId>24739</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="39" parent="13" name="lb_creditcard_payments_details">
+    <table id="41" parent="13" name="lb_creditcard_payments_details">
       <ObjectId>24734</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="40" parent="13" name="lb_favorites">
+    <table id="42" parent="13" name="lb_favorites">
       <ObjectId>24670</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="41" parent="13" name="lb_loan_payments_details">
+    <table id="43" parent="13" name="lb_loan_payments_details">
       <ObjectId>24719</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="42" parent="13" name="lb_loans">
+    <table id="44" parent="13" name="lb_loans">
       <ObjectId>24724</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="43" parent="13" name="lb_transferences">
+    <table id="45" parent="13" name="lb_transferences">
       <ObjectId>24699</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <table id="44" parent="13" name="lb_transferences_detail">
+    <table id="46" parent="13" name="lb_transferences_detail">
       <ObjectId>24693</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>584</StateNumber>
     </table>
-    <column id="45" parent="32" name="aca_id">
+    <column id="47" parent="33" name="aca_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -288,49 +302,49 @@ sequence|table|32860|32862|1
       <DefaultExpression>nextval(&apos;lb_bank.lb_account_catalog_aca_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="46" parent="32" name="aca_name">
+    <column id="48" parent="33" name="aca_name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>597</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="47" parent="32" name="pk_lb_account_catalog">
+    <index id="49" parent="33" name="pk_lb_account_catalog">
       <ObjectId>32866</ObjectId>
       <StateNumber>597</StateNumber>
       <ColNames>aca_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="48" parent="32" name="pk_lb_account_catalog">
+    <key id="50" parent="33" name="pk_lb_account_catalog">
       <ObjectId>32867</ObjectId>
       <StateNumber>597</StateNumber>
       <ColNames>aca_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_account_catalog</UnderlyingIndexName>
     </key>
-    <column id="49" parent="33" name="acp_acc_id">
+    <column id="51" parent="34" name="acp_acc_id">
       <Position>1</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="50" parent="33" name="acp_cre_id">
+    <column id="52" parent="34" name="acp_cre_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="33" name="acp_cpd_id">
+    <column id="53" parent="34" name="acp_cpd_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="52" parent="33" name="pk_lb_account_creditcard_payments">
+    <index id="54" parent="34" name="pk_lb_account_creditcard_payments">
       <ObjectId>24782</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acp_acc_id
@@ -339,7 +353,7 @@ acp_cpd_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="53" parent="33" name="pk_lb_account_creditcard_payments">
+    <key id="55" parent="34" name="pk_lb_account_creditcard_payments">
       <ObjectId>24783</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acp_acc_id
@@ -348,7 +362,7 @@ acp_cpd_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_account_creditcard_payments</UnderlyingIndexName>
     </key>
-    <foreign-key id="54" parent="33" name="fk_80">
+    <foreign-key id="56" parent="34" name="fk_80">
       <ObjectId>24784</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acp_acc_id</ColNames>
@@ -358,7 +372,7 @@ acp_cpd_id</ColNames>
       <RefKeyName>pk_lb_bank_account</RefKeyName>
       <RefColNames>acc_id</RefColNames>
     </foreign-key>
-    <foreign-key id="55" parent="33" name="fk_83">
+    <foreign-key id="57" parent="34" name="fk_83">
       <ObjectId>24789</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acp_cre_id</ColNames>
@@ -368,7 +382,7 @@ acp_cpd_id</ColNames>
       <RefKeyName>pk_lb_credit_cards</RefKeyName>
       <RefColNames>cre_id</RefColNames>
     </foreign-key>
-    <foreign-key id="56" parent="33" name="fk_94">
+    <foreign-key id="58" parent="34" name="fk_94">
       <ObjectId>24794</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acp_cpd_id</ColNames>
@@ -378,28 +392,28 @@ acp_cpd_id</ColNames>
       <RefKeyName>pk_lb_creditcard_payments_details</RefKeyName>
       <RefColNames>cpd_id</RefColNames>
     </foreign-key>
-    <column id="57" parent="34" name="alp_acc_id">
+    <column id="59" parent="35" name="alp_acc_id">
       <Position>1</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="34" name="alp_loa_id">
+    <column id="60" parent="35" name="alp_loa_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="59" parent="34" name="alp_lpd_id">
+    <column id="61" parent="35" name="alp_lpd_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="60" parent="34" name="pk_lb_account_loan_payments">
+    <index id="62" parent="35" name="pk_lb_account_loan_payments">
       <ObjectId>24762</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>alp_acc_id
@@ -408,7 +422,7 @@ alp_lpd_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="61" parent="34" name="pk_lb_account_loan_payments">
+    <key id="63" parent="35" name="pk_lb_account_loan_payments">
       <ObjectId>24763</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>alp_acc_id
@@ -417,7 +431,7 @@ alp_lpd_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_account_loan_payments</UnderlyingIndexName>
     </key>
-    <foreign-key id="62" parent="34" name="fk_62">
+    <foreign-key id="64" parent="35" name="fk_62">
       <ObjectId>24764</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>alp_acc_id</ColNames>
@@ -427,7 +441,7 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_bank_account</RefKeyName>
       <RefColNames>acc_id</RefColNames>
     </foreign-key>
-    <foreign-key id="63" parent="34" name="fk_66">
+    <foreign-key id="65" parent="35" name="fk_66">
       <ObjectId>24769</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>alp_loa_id</ColNames>
@@ -437,7 +451,7 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_loans</RefKeyName>
       <RefColNames>loa_id</RefColNames>
     </foreign-key>
-    <foreign-key id="64" parent="34" name="fk_76">
+    <foreign-key id="66" parent="35" name="fk_76">
       <ObjectId>24774</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>alp_lpd_id</ColNames>
@@ -447,49 +461,92 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_loan_payments_details</RefKeyName>
       <RefColNames>lpd_id</RefColNames>
     </foreign-key>
-    <column id="65" parent="35" name="acc_id">
+    <column id="67" parent="36" name="are_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <DefaultExpression>nextval(&apos;lb_bank.lb_authorization_registry_are_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="36" name="are_client_id">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="69" parent="36" name="are_client_ip">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="70" parent="36" name="are_creation_date">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="71" parent="36" name="pk_lb_authorization_registry">
+      <ObjectId>32874</ObjectId>
+      <StateNumber>600</StateNumber>
+      <ColNames>are_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="72" parent="36" name="pk_lb_authorization_registry">
+      <ObjectId>32875</ObjectId>
+      <StateNumber>600</StateNumber>
+      <ColNames>are_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_lb_authorization_registry</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="37" name="acc_id">
       <Position>1</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="66" parent="35" name="acc_fecha_creacion">
+    <column id="74" parent="37" name="acc_fecha_creacion">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="67" parent="35" name="acc_monto">
+    <column id="75" parent="37" name="acc_monto">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="68" parent="35" name="acc_cli_id">
+    <column id="76" parent="37" name="acc_cli_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="69" parent="35" name="pk_lb_bank_account">
+    <index id="77" parent="37" name="pk_lb_bank_account">
       <ObjectId>24684</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acc_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="70" parent="35" name="pk_lb_bank_account">
+    <key id="78" parent="37" name="pk_lb_bank_account">
       <ObjectId>24685</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acc_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_bank_account</UnderlyingIndexName>
     </key>
-    <foreign-key id="71" parent="35" name="fk_33">
+    <foreign-key id="79" parent="37" name="fk_33">
       <ObjectId>24686</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>acc_cli_id</ColNames>
@@ -499,63 +556,63 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_client</RefKeyName>
       <RefColNames>cli_id</RefColNames>
     </foreign-key>
-    <column id="72" parent="36" name="cpa_id">
+    <column id="80" parent="38" name="cpa_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="73" parent="36" name="cpa_cre_id">
+    <column id="81" parent="38" name="cpa_cre_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="74" parent="36" name="cpa_payment_amount">
+    <column id="82" parent="38" name="cpa_payment_amount">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="75" parent="36" name="cpa_payment_description">
+    <column id="83" parent="38" name="cpa_payment_description">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="76" parent="36" name="cpa_payment_date">
+    <column id="84" parent="38" name="cpa_payment_date">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="77" parent="36" name="cpa_authorization_number">
+    <column id="85" parent="38" name="cpa_authorization_number">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="78" parent="36" name="pk_lb_card_payments">
+    <index id="86" parent="38" name="pk_lb_card_payments">
       <ObjectId>24752</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cpa_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="79" parent="36" name="pk_lb_card_payments">
+    <key id="87" parent="38" name="pk_lb_card_payments">
       <ObjectId>24753</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cpa_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_card_payments</UnderlyingIndexName>
     </key>
-    <foreign-key id="80" parent="36" name="fk_97">
+    <foreign-key id="88" parent="38" name="fk_97">
       <ObjectId>24754</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cpa_cre_id</ColNames>
@@ -565,7 +622,7 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_credit_cards</RefKeyName>
       <RefColNames>cre_id</RefColNames>
     </foreign-key>
-    <column id="81" parent="37" name="cli_id">
+    <column id="89" parent="39" name="cli_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -573,119 +630,119 @@ alp_lpd_id</ColNames>
       <DefaultExpression>nextval(&apos;lb_bank.lb_client_cli_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="82" parent="37" name="cli_mail">
+    <column id="90" parent="39" name="cli_mail">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="83" parent="37" name="cli_password">
+    <column id="91" parent="39" name="cli_password">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="84" parent="37" name="cli_document">
+    <column id="92" parent="39" name="cli_document">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="85" parent="37" name="cli_username">
+    <column id="93" parent="39" name="cli_username">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="86" parent="37" name="pk_lb_client">
+    <index id="94" parent="39" name="pk_lb_client">
       <ObjectId>24666</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cli_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="87" parent="37" name="pk_lb_client">
+    <key id="95" parent="39" name="pk_lb_client">
       <ObjectId>24667</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cli_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_client</UnderlyingIndexName>
     </key>
-    <column id="88" parent="38" name="cre_id">
+    <column id="96" parent="40" name="cre_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="89" parent="38" name="cre_amount_limit">
+    <column id="97" parent="40" name="cre_amount_limit">
       <Position>2</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="90" parent="38" name="cre_creation_date">
+    <column id="98" parent="40" name="cre_creation_date">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="91" parent="38" name="cre_amount_available">
+    <column id="99" parent="40" name="cre_amount_available">
       <Position>4</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="92" parent="38" name="cre_interest_rate">
+    <column id="100" parent="40" name="cre_interest_rate">
       <Position>5</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="93" parent="38" name="cre_interest_accumulated">
+    <column id="101" parent="40" name="cre_interest_accumulated">
       <Position>6</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="94" parent="38" name="cre_cut_day">
+    <column id="102" parent="40" name="cre_cut_day">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="95" parent="38" name="cre_cli_id">
+    <column id="103" parent="40" name="cre_cli_id">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="96" parent="38" name="pk_lb_credit_cards">
+    <index id="104" parent="40" name="pk_lb_credit_cards">
       <ObjectId>24742</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cre_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="97" parent="38" name="pk_lb_credit_cards">
+    <key id="105" parent="40" name="pk_lb_credit_cards">
       <ObjectId>24743</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cre_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_credit_cards</UnderlyingIndexName>
     </key>
-    <foreign-key id="98" parent="38" name="fk_44">
+    <foreign-key id="106" parent="40" name="fk_44">
       <ObjectId>24744</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cre_cli_id</ColNames>
@@ -695,56 +752,56 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_client</RefKeyName>
       <RefColNames>cli_id</RefColNames>
     </foreign-key>
-    <column id="99" parent="39" name="cpd_id">
+    <column id="107" parent="41" name="cpd_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="100" parent="39" name="cpd_payment_date">
+    <column id="108" parent="41" name="cpd_payment_date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="101" parent="39" name="cpd_payment_amount">
+    <column id="109" parent="41" name="cpd_payment_amount">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="102" parent="39" name="cpd_authorization_number">
+    <column id="110" parent="41" name="cpd_authorization_number">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="103" parent="39" name="cpd_description">
+    <column id="111" parent="41" name="cpd_description">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="104" parent="39" name="pk_lb_creditcard_payments_details">
+    <index id="112" parent="41" name="pk_lb_creditcard_payments_details">
       <ObjectId>24737</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cpd_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="105" parent="39" name="pk_lb_creditcard_payments_details">
+    <key id="113" parent="41" name="pk_lb_creditcard_payments_details">
       <ObjectId>24738</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>cpd_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_creditcard_payments_details</UnderlyingIndexName>
     </key>
-    <column id="106" parent="40" name="fav_id">
+    <column id="114" parent="42" name="fav_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -752,70 +809,70 @@ alp_lpd_id</ColNames>
       <DefaultExpression>nextval(&apos;lb_bank.lb_favorites_fav_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="107" parent="40" name="fav_creation_date">
+    <column id="115" parent="42" name="fav_creation_date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="108" parent="40" name="fav_state">
+    <column id="116" parent="42" name="fav_state">
       <Position>3</Position>
       <DataType>varchar(1)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="109" parent="40" name="fav_cli_id">
+    <column id="117" parent="42" name="fav_cli_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="110" parent="40" name="fav_product_type">
+    <column id="118" parent="42" name="fav_product_type">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="111" parent="40" name="fav_product_code">
+    <column id="119" parent="42" name="fav_product_code">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="112" parent="40" name="fav_email">
+    <column id="120" parent="42" name="fav_email">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="113" parent="40" name="fav_name">
+    <column id="121" parent="42" name="fav_name">
       <Position>8</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="114" parent="40" name="pk_lb_favorites">
+    <index id="122" parent="42" name="pk_lb_favorites">
       <ObjectId>24674</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>fav_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="115" parent="40" name="pk_lb_favorites">
+    <key id="123" parent="42" name="pk_lb_favorites">
       <ObjectId>24675</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>fav_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_favorites</UnderlyingIndexName>
     </key>
-    <foreign-key id="116" parent="40" name="fk_109">
+    <foreign-key id="124" parent="42" name="fk_109">
       <ObjectId>24676</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>fav_cli_id</ColNames>
@@ -825,119 +882,119 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_client</RefKeyName>
       <RefColNames>cli_id</RefColNames>
     </foreign-key>
-    <column id="117" parent="41" name="lpd_id">
+    <column id="125" parent="43" name="lpd_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="118" parent="41" name="lpd_payment_date">
+    <column id="126" parent="43" name="lpd_payment_date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="119" parent="41" name="lpd_payment_amount">
+    <column id="127" parent="43" name="lpd_payment_amount">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="120" parent="41" name="lpd_authorization_number">
+    <column id="128" parent="43" name="lpd_authorization_number">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="121" parent="41" name="lpd_description">
+    <column id="129" parent="43" name="lpd_description">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="122" parent="41" name="pk_lb_loan_payments_details">
+    <index id="130" parent="43" name="pk_lb_loan_payments_details">
       <ObjectId>24722</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>lpd_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="123" parent="41" name="pk_lb_loan_payments_details">
+    <key id="131" parent="43" name="pk_lb_loan_payments_details">
       <ObjectId>24723</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>lpd_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_loan_payments_details</UnderlyingIndexName>
     </key>
-    <column id="124" parent="42" name="loa_id">
+    <column id="132" parent="44" name="loa_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="125" parent="42" name="loa_start_date">
+    <column id="133" parent="44" name="loa_start_date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="126" parent="42" name="loa_total_amount">
+    <column id="134" parent="44" name="loa_total_amount">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="127" parent="42" name="loa_debt">
+    <column id="135" parent="44" name="loa_debt">
       <Position>4</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="128" parent="42" name="loa_interest_rate">
+    <column id="136" parent="44" name="loa_interest_rate">
       <Position>5</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="129" parent="42" name="loa_interest_amount">
+    <column id="137" parent="44" name="loa_interest_amount">
       <Position>6</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="130" parent="42" name="loa_cli_id">
+    <column id="138" parent="44" name="loa_cli_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="131" parent="42" name="pk_lb_loans">
+    <index id="139" parent="44" name="pk_lb_loans">
       <ObjectId>24727</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>loa_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="132" parent="42" name="pk_lb_loans">
+    <key id="140" parent="44" name="pk_lb_loans">
       <ObjectId>24728</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>loa_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_loans</UnderlyingIndexName>
     </key>
-    <foreign-key id="133" parent="42" name="fk_58">
+    <foreign-key id="141" parent="44" name="fk_58">
       <ObjectId>24729</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>loa_cli_id</ColNames>
@@ -947,28 +1004,28 @@ alp_lpd_id</ColNames>
       <RefKeyName>pk_lb_client</RefKeyName>
       <RefColNames>cli_id</RefColNames>
     </foreign-key>
-    <column id="134" parent="43" name="tra_emitter_account">
+    <column id="142" parent="45" name="tra_emitter_account">
       <Position>1</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="135" parent="43" name="tra_receiver_account">
+    <column id="143" parent="45" name="tra_receiver_account">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="136" parent="43" name="tra_dtr_id">
+    <column id="144" parent="45" name="tra_dtr_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="137" parent="43" name="pk_lb_transferences">
+    <index id="145" parent="45" name="pk_lb_transferences">
       <ObjectId>24702</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>tra_emitter_account
@@ -977,7 +1034,7 @@ tra_dtr_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="138" parent="43" name="pk_lb_transferences">
+    <key id="146" parent="45" name="pk_lb_transferences">
       <ObjectId>24703</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>tra_emitter_account
@@ -986,7 +1043,7 @@ tra_dtr_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_lb_transferences</UnderlyingIndexName>
     </key>
-    <foreign-key id="139" parent="43" name="fk_9">
+    <foreign-key id="147" parent="45" name="fk_9">
       <ObjectId>24714</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>tra_emitter_account</ColNames>
@@ -996,7 +1053,7 @@ tra_dtr_id</ColNames>
       <RefKeyName>pk_lb_bank_account</RefKeyName>
       <RefColNames>acc_id</RefColNames>
     </foreign-key>
-    <foreign-key id="140" parent="43" name="fk_13">
+    <foreign-key id="148" parent="45" name="fk_13">
       <ObjectId>24704</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>tra_receiver_account</ColNames>
@@ -1006,7 +1063,7 @@ tra_dtr_id</ColNames>
       <RefKeyName>pk_lb_bank_account</RefKeyName>
       <RefColNames>acc_id</RefColNames>
     </foreign-key>
-    <foreign-key id="141" parent="43" name="fk_23">
+    <foreign-key id="149" parent="45" name="fk_23">
       <ObjectId>24709</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>tra_dtr_id</ColNames>
@@ -1016,7 +1073,7 @@ tra_dtr_id</ColNames>
       <RefKeyName>pk_lb_transferences_detail</RefKeyName>
       <RefColNames>dtr_id</RefColNames>
     </foreign-key>
-    <column id="142" parent="44" name="dtr_id">
+    <column id="150" parent="46" name="dtr_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1024,42 +1081,42 @@ tra_dtr_id</ColNames>
       <DefaultExpression>nextval(&apos;lb_bank.lb_transferences_detail_dtr_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="143" parent="44" name="dtr_transfer_date">
+    <column id="151" parent="46" name="dtr_transfer_date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="144" parent="44" name="dtr_amount_transfered">
+    <column id="152" parent="46" name="dtr_amount_transfered">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="145" parent="44" name="dtr_authorization_number">
+    <column id="153" parent="46" name="dtr_authorization_number">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="146" parent="44" name="dtr_description">
+    <column id="154" parent="46" name="dtr_description">
       <Position>5</Position>
       <DataType>varchar(250)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="147" parent="44" name="pk_lb_transferences_detail">
+    <index id="155" parent="46" name="pk_lb_transferences_detail">
       <ObjectId>24697</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>dtr_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="148" parent="44" name="pk_lb_transferences_detail">
+    <key id="156" parent="46" name="pk_lb_transferences_detail">
       <ObjectId>24698</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>dtr_id</ColNames>
