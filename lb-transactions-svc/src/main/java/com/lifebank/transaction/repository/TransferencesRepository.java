@@ -11,6 +11,6 @@ import java.util.List;
 
 public interface TransferencesRepository extends TransaccionesRepository<LbTransferencesPOJO, LbTransferencesPOJOPK> {
     @Override
-    @Query(value = "SELECT t from LbTransferencesPOJO t where tra_emitter_account = (:productId)")
+    @Query(value = "SELECT t from LbTransferencesPOJO t where tra_emitter_account = (:productId) or tra_receiver_account = (:productId)")
     List<ITransaction> findTransaccionesOfProduct(@Param("productId") String productId);
 }
