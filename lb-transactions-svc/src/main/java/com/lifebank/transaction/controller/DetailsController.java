@@ -12,6 +12,9 @@ import com.lifebank.transaction.factory.response.AccountResponseFactory;
 import com.lifebank.transaction.factory.response.CreditCardResponseFactory;
 import com.lifebank.transaction.factory.response.IResponseFactory;
 import com.lifebank.transaction.factory.response.LoanResponseFactory;
+import com.lifebank.transaction.filter.IFilter;
+import com.lifebank.transaction.filter.NoFilter;
+import com.lifebank.transaction.filter.TransferencesFilter;
 import com.lifebank.transaction.process.DetailsProcess;
 import com.lifebank.transaction.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,30 +76,34 @@ public class DetailsController {
         IFactory factory;
         IResponseFactory responseFactory;
         JpaRepository productRepository;
+        IFilter iFilter;
         switch (prd){
             case KEY_CREDIT:
                 iTransactionCollector = new CardTransactionsCollector(cardPaymentsRepository);
                 factory = new CreditCardFactory();
                 responseFactory = new CreditCardResponseFactory();
                 productRepository = cardsRepository;
+                iFilter = new NoFilter();
                 break;
             case KEY_LOAN:
                 iTransactionCollector = new LoanTransactionsCollector(accountsPayLoansRepository);
                 factory = new PrestamosFactory(loanPaymentsDetailsRepository);
                 responseFactory = new LoanResponseFactory();
                 productRepository = loanRepository;
+                iFilter = new NoFilter();
                 break;
             case KEY_ACCOUNT:
                 iTransactionCollector = new AccountTransactionsCollector(transferencesRepository, accountsPayLoansRepository, accountsPayCardsRepository);
                 factory = new AccountFactory(env, transferenceDetailsRepository);
                 responseFactory = new AccountResponseFactory();
                 productRepository = bankAccountsRepository;
+                iFilter = new TransferencesFilter();
                 break;
             default:
                 return new ResponseEntity<>("No existe Producto", HttpStatus.BAD_REQUEST);
 
         }
-        detailsProcess = new DetailsProcess(productRepository, iTransactionCollector, factory, responseFactory);
+        detailsProcess = new DetailsProcess(productRepository, iTransactionCollector, factory, responseFactory, iFilter);
         return detailsProcess.process(accountID, startDate, endDate);
     }
 }
